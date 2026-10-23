@@ -1,0 +1,33 @@
+{
+  "name": "@aldy/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "ts-node app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "test": "npm run build && node tests/api-smoke.cjs && node tests/supabase-contract.cjs",
+    "setup:supabase": "node scripts/setupSupabase.cjs",
+    "seed": "node scripts/seedSupabase.cjs",
+    "verify:supabase": "node scripts/verifySupabase.cjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "multer": "^2.2.0",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^24.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

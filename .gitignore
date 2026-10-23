@@ -1,0 +1,31 @@
+# Local credentials and private archives
+.env
+.env.*
+!.env.example
+!**/.env.example
+legacy-dien/
+image-originals/
+.claude/
+.agents/
+.codex/
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+# Generated files
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+.cache/
+.turbo/
+.vercel/
+*.tsbuildinfo
+*.log
+.DS_Store
+# Supabase local state
+supabase/.temp/
+supabase/.branches/

@@ -1,0 +1,22 @@
+{
+  "name": "aldy-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "be",
+    "fe"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:api": "npm run dev --workspace @aldy/api",
+    "dev:web": "npm run dev --workspace @aldy/web",
+    "build": "npm run build --workspace @aldy/api && npm run build --workspace @aldy/web",
+    "test": "npm run test --workspace @aldy/api && npm run lint --workspace @aldy/web",
+    "setup:supabase": "npm run setup:supabase --workspace @aldy/api",
+    "seed": "npm run seed --workspace @aldy/api",
+    "verify:supabase": "npm run verify:supabase --workspace @aldy/api"
+  }
+}
